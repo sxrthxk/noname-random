@@ -1,0 +1,134 @@
+@import "../../../css-config/mixins.scss";
+
+:root{
+    --heading: rgb(0 10 45);
+    --third: #fff;
+    --shadpw: 0px 0px 20px 0px rgb(132 144 255 / 20%);
+    --para: #777777;
+    --para-tint: #e4e4e4;
+}
+p {
+    line-height: 1.6;
+    font-size: 20px;
+  }
+  
+  .container {
+    max-width: 100rem;
+    margin: 0 auto;
+   // height: 100px;
+  }
+
+  .grid {
+    display: grid;
+    gap: 9rem;
+  }
+
+  .grid-two-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+.customer-heading{
+    padding: 2rem;
+    font-size: 34px;
+    margin-top: 3rem;
+    text-align: left;
+    color:#6474ff;   
+}
+h6::after {
+  display: block;
+    content: '';
+   width: 56%;
+   height: 3px;
+   background: #8c98ff;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   margin-left: 2.2rem;
+
+   @include sm{
+    width: 40%;
+   }
+   @include lg{
+    width: 22%;
+   }
+}
+
+ h6{
+ position: relative;  
+ }
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .cust-msg{
+    padding: 4rem 7rem;
+    background-color: var(--third);
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: var(--shadpw);
+    position: relative;
+  }
+  .cust-msg::before{
+    content: "";
+    position: absolute;
+    bottom: -10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5rem solid var(--third);
+    border-color: transparent;
+    border-top-color: var(--third);
+  }
+  .cust-msg p::before{
+  content: "\201C";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #ced3ff;
+  }
+  .cust-msg p::after{
+    content: "\201D";
+    position: absolute;
+    bottom: 0%;
+    right: 5%;
+    font-size: 5rem;
+    font-weight: 900;
+    color: #ced3ff;
+  }
+  .cust-data{
+    align-items: center;
+    justify-items: start;
+    justify-content: start;
+    gap: 1.4rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .cust-msg .cust-data-details {
+    color: var(--para);
+  }
+  .cust-data img{
+    max-width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 0.5rem solid #ced3ff;
+    margin-left: 10rem;
+  }
+.cust-data p:first-child{
+  font-weight: bold;
+  color:  #6474ff;
+}

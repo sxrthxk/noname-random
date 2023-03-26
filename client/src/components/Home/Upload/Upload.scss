@@ -1,0 +1,119 @@
+@import "../../../css-config/mixins.scss";
+.hero-secn {
+    //margin-top: 3rem;
+    padding: 40px 0;
+    position:relative;
+    height: 300px;
+    
+    @include md {
+        height: 350px;
+        background-size: cover;
+       // background-repeat: no-repeat;
+    }
+    .content {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column-reverse;
+        max-width: calc(100% - 20px);
+       margin: 0 auto;
+        position: relative;
+        @include md {
+            flex-direction: row;
+            max-width: 1200px;
+        }
+        .text-content {
+            color: rgb(7, 6, 6);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+    
+            @include md {
+                position: absolute;
+                left: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                
+            }
+            @include xxl {
+                left: 0;
+            }
+            h2 {
+                line-height: 1;
+                color: rgb(7, 6, 6);
+                margin-bottom: 20px;
+                text-align: left;
+                @include md {
+                    font-size: 36px;
+                    text-align: left;
+                }
+            }
+            p {
+                max-width: 300px;
+                font-size: 22px;
+                line-height: 20px;
+                margin-bottom: 20px;
+                text-align: left;
+                @include md {
+                    max-width: 500px;
+                    font-size: 30px;
+                    line-height: 28px;
+                    margin-bottom: 40px;
+                    text-align: left;
+                }
+            }
+            .ctas {
+                display: flex;
+                justify-content:flex-start;
+                gap: 20px;
+                .vdo-cta {
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    font-weight: 500;
+                    width: fit-content;
+                    border: 2px solid rgb(7, 6, 6);
+                    padding: 10px 20px;
+                    transition: all ease 0.3s;
+                    cursor: pointer;
+                    &.v2 {
+                        background-color: rgb(7, 6, 6);
+                        color: rgb(248, 241, 241);
+                    }
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+    }
+}
+.upload-icon{
+    display:none;
+    size: 100px;
+}
+
+.left1{
+    list-style-type: none;
+            display: none;
+            gap: 30px;
+            margin-top: 22rem;
+            font-size: 25px;
+            color: black;
+            @include md{
+                display: flex;
+            }
+}
+
+.right1{
+    list-style-type: none;
+    display:none;
+    gap: 30px;
+    //margin-top: 20rem;
+    //font-size: larger;
+    color:black;
+            @include md{
+                display: flex;
+            }
+}
